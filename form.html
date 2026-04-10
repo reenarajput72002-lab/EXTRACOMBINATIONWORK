@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS All In One</title>
+
+    <style>
+      body{
+        font-family:Lucida Calligraphy;
+        text-align:center;
+        padding-top:50px;
+      }
+      input{
+        padding:10px;
+        margin:10px;
+        width:200px;
+      }
+      button{
+        padding:10px 20px;
+        margin:10px;
+        border:none;
+        background-color:black;
+        color:white;
+        cursor:pointer;
+      }
+      button:hover {
+        background-color:orange;
+      }
+      #result{
+        font-size:20px;
+        mergin-top:20px;
+        color:blue;
+      }
+ 
+  </style>
+  </head>
+  <body>
+    <h2>Enter Your Name</h2>
+
+    <input type="text" id="name"
+      placeholder="Enter name">
+    <br>
+    <button onclick="showName()">Show Massage</button>
+    <button
+      onclick="changeColor()">Change Background</button>
+    <h3 id="result"></h3>
+
+    <script>
+      function showName() {
+        var name=
+          document.getElementById("name").value;
+
+        if (name=== "") {
+          document.getElementById("result").inner
+          HTML = "Please enter your name";
+        } else {
+          document.getElementById("result").inner
+          HTML = "Hello " + name + " , Good
+            Evening";
+        }
+      }
+      function changeColor(){
+        document.body.style.backgroundColor =
+          "lighblue";
+      }
+    </script>
+    
+    </script>
+      
+  </body>
+</html>
