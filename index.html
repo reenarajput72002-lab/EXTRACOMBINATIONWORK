@@ -48,24 +48,28 @@
     <h3 id="result"></h3>
 
     <script>
-      function showName() {
-        var name =
-          document.getElementById("name").value;
+  function showName() {
+    var name = document.getElementById("name").value;
 
-        if (name === "") {
-          document.getElementById("result").inner
-          HTML = "Please enter your name";
-        } else {
-          document.getElementById("result").inner
-          HTML = "Hello " + name + " , Good
-            Evening";
-        }
-      }
-      function changeColor() {
-        document.body.style.backgroundColor =
-          "lighblue";
-      }
-    </script>
+    if (name.trim() === "") {
+      document.getElementById("result").innerHTML = "Please enter your name";
+    } else {
+      document.getElementById("result").innerHTML = "Hello " + name + ", Good Evening 😄";
+    }
+  }
+
+  var colors = ["lightblue", "lightgreen", "yellow", "pink", "orange"];
+  var index = 0;
+
+  function changeColor() {
+    document.body.style.backgroundColor = colors[index];
+    index++;
+
+    if (index >= colors.length) {
+      index = 0;
+    }
+  }
+</script>
     
 </body>
 </html>
